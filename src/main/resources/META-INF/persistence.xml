@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="warehouse">
+        <class>org.example.domain.model.SupplierModel</class>
+        <class>org.example.domain.model.UserModel</class>
+        <class>org.example.domain.model.ProductModel</class>
+        <class>org.example.domain.model.ImportProductModel</class>
+        <class>org.example.domain.model.ExportProductModel</class>
+        <class>org.example.domain.model.Status</class>
+        <class>org.example.domain.model.ExportDetailModel</class>
+        <class>org.example.domain.model.ImportDetailModel</class>
+        <properties>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/btlJava?createDatabaseIfNotExist=true" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="123456" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
